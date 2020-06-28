@@ -29,7 +29,7 @@ public class FirstHomeWorkJava {
         HashMap<String,Integer> shoppingList = new HashMap<>();
         shoppingList.put("Apple",10);
         shoppingList.put("Avocado",2);
-        shoppingList.put("Watermellom",5);
+        shoppingList.put("Watermelon",5);
         shoppingList.put("Pineapple",7);
         shoppingList.put("Grapes",1);
         System.out.println("Today's shopping list is:");

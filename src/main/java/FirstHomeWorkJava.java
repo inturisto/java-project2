@@ -1,6 +1,8 @@
 import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
+import java.util.Map;
 
 public class FirstHomeWorkJava {
     public static void main(String[] args) {
@@ -9,7 +11,7 @@ public class FirstHomeWorkJava {
         FirstHomeWorkJava eventOutput = new FirstHomeWorkJava();
         eventOutput.plannedEventOutput();
         FirstHomeWorkJava shoppingData = new FirstHomeWorkJava();
-        shoppingData.shoppingList();
+        shoppingData.shoppingListOutput();
     }
 
     public void convertMoney(BigDecimal euroRateToDollar, BigDecimal euroAmountToConvert) {
@@ -23,24 +25,20 @@ public class FirstHomeWorkJava {
         System.out.println(calendar.getTime() + " you have planned to attend " + event + ".");
     }
 
-    public void shoppingList() {
-        String[][] shoppingList = new String[4][4];
-        shoppingList[0][0] = "Avocado";
-        shoppingList[0][1] = Integer.toString(4);
-        shoppingList[1][0] = "Apple";
-        shoppingList[1][1] = Integer.toString(3);
-        shoppingList[2][0] = "Lemon";
-        shoppingList[2][1] = Integer.toString(10);
-        shoppingList[3][0] = "Grapefruit";
-        shoppingList[3][1] = Integer.toString(5);
-
-        for (String[] strings : shoppingList) {
-            for (String string : strings) {
-                System.out.print(string + "\t");
+    public void shoppingListOutput() {
+        HashMap<String,Integer> shoppingList = new HashMap<>();
+        shoppingList.put("Apple",10);
+        shoppingList.put("Avocado",2);
+        shoppingList.put("Watermellom",5);
+        shoppingList.put("Pineapple",7);
+        shoppingList.put("Grapes",1);
+        System.out.println("Today's shopping list is:");
+        for (Map.Entry<String,Integer> list:shoppingList.entrySet()){
+            System.out.println(list.getKey()+" : "+list.getValue()+" KG");
             }
-
+        }
         }
 
-    }
-}
+
+
 

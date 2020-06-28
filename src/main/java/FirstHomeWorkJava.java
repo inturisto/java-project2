@@ -26,18 +26,18 @@ public class FirstHomeWorkJava {
     }
 
     public void shoppingListOutput() {
-        HashMap<String,Integer> shoppingList = new HashMap<>();
-        shoppingList.put("Apple",10);
-        shoppingList.put("Avocado",2);
-        shoppingList.put("Watermelon",5);
-        shoppingList.put("Pineapple",7);
-        shoppingList.put("Grapes",1);
+        HashMap<String, Integer> shoppingList = new HashMap<>();
+        shoppingList.put("Apple", 10);
+        shoppingList.put("Avocado", 2);
+        shoppingList.put("Watermelon", 5);
+        shoppingList.put("Pineapple", 7);
+        shoppingList.put("Grapes", 1);
         System.out.println("Today's shopping list is:");
-        for (Map.Entry<String,Integer> list:shoppingList.entrySet()){
-            System.out.println(list.getKey()+" : "+list.getValue()+" KG");
-            }
+        for (Map.Entry<String, Integer> list : shoppingList.entrySet()) {
+            System.out.println(list.getKey() + " : " + list.getValue() + " KG");
         }
-        }
+    }
+}
 
 
 

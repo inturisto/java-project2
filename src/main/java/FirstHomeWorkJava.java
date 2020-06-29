@@ -7,7 +7,7 @@ import java.util.Map;
 public class FirstHomeWorkJava {
     public static void main(String[] args) {
         FirstHomeWorkJava currencyConverter = new FirstHomeWorkJava();
-        currencyConverter.convertMoney(BigDecimal.valueOf(1.1235758), BigDecimal.valueOf(1000));
+        currencyConverter.convertMoney(BigDecimal.valueOf(1.1261), BigDecimal.valueOf(1000));
         FirstHomeWorkJava eventOutput = new FirstHomeWorkJava();
         eventOutput.plannedEventOutput();
         FirstHomeWorkJava shoppingData = new FirstHomeWorkJava();

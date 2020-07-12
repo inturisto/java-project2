@@ -16,18 +16,21 @@ public class SecondHomeWork {
                 "on repeat for 106 days (not that anyone is counting), you might be a bit too fried to funnel your rage" +
                 " effectively.";
 
-        String[] separatedWordsArray = anyTextInputFromArticle.toLowerCase().replaceAll("[^\\w\\s]", "").split(" ");
+        String[] separatedWordsArray = anyTextInputFromArticle.toLowerCase().replaceAll("[^\\w\\s]", "").
+                replaceAll("  *", " ").split(" ");
         System.out.println("Total word count in text = " + separatedWordsArray.length);
         System.out.println();
+
         HashMap<String, Integer> uniqueWordCounter = new HashMap<>();
         for (String wordEntry : separatedWordsArray) {
             uniqueWordCounter.put(wordEntry,
                     (uniqueWordCounter.get(wordEntry) == null ? 1 : (uniqueWordCounter.get(wordEntry) + 1)));
         }
-        for (Map.Entry<String, Integer> mapOutput : uniqueWordCounter.entrySet()
-        ) {
+
+        for (Map.Entry<String, Integer> mapOutput : uniqueWordCounter.entrySet()) {
             System.out.println(mapOutput.getKey() + " : " + mapOutput.getValue() + " times");
         }
+
         System.out.println();
         System.out.println("Unique word count in text = " + uniqueWordCounter.size());
     }

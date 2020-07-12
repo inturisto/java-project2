@@ -16,7 +16,7 @@ public class SecondHomeWork {
                 "on repeat for 106 days (not that anyone is counting), you might be a bit too fried to funnel your rage" +
                 " effectively.";
 
-        String[] separatedWordsArray = anyTextInputFromArticle.toLowerCase().replaceAll("[^\\w\\s]", "").
+        String[] separatedWordsArray = anyTextInputFromArticle.toLowerCase().replaceAll(" - ", " ").replaceAll("[^\\w\\s-]", "").
                 replaceAll("  *", " ").split(" ");
         System.out.println("Total word count in text = " + separatedWordsArray.length);
         System.out.println();
